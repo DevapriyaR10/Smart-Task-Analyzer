@@ -1,4 +1,4 @@
-Smart Task Analyzer
+#Smart Task Analyzer
 A lightweight AI-inspired task analysis tool that ranks tasks based on urgency, dependencies, importance, and estimated effort.
 Backend is built with Django REST Framework, and the frontend is a clean HTML/JS interface.
 
@@ -97,3 +97,9 @@ Improvements for Future Versions
 2) Visual Dependency Graph
 3) AI-based Suggestion Engine
 4) Convert to React or Vue app
+
+<img width="1900" height="900" alt="Screenshot 2025-11-27 202002" src="https://github.com/user-attachments/assets/0d8f8ce4-9ce3-498b-82e9-66513f5d1d00" />
+<img width="1896" height="895" alt="Screenshot 2025-11-27 202014" src="https://github.com/user-attachments/assets/b512bcfc-6dce-461f-8fc5-75c5795ed0a2" />
+<img width="1901" height="911" alt="Screenshot 2025-11-27 202030" src="https://github.com/user-attachments/assets/be4be0c2-9ee7-453d-933c-6fb804206056" />
+
+
