@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Smart Task Analyzer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Smart Task Analyzer</h1>
+      <button class="theme-toggle" id="theme-toggle">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-text">Dark</span>
+      </button>
+    </div>
+
+    <section class="panel">
+      <h2>Input</h2>
+      <form id="task-form">
+        <div class="row">
+          <input id="title" placeholder="Task title" required />
+          <input id="due_date" type="date" />
+          <input id="estimated_hours" type="number" min="0.1" step="0.1" placeholder="Hours" value="1" />
+          <input id="importance" type="number" min="1" max="10" placeholder="Importance (1-10)" value="5" />
+        </div>
+        <div class="row">
+          <input id="dependencies" placeholder="Dependencies (comma-separated IDs)" style="flex: 2;" />
+        </div>
+        <div class="row">
+          <button id="add-task" type="button">Add Task</button>
+          <button id="analyze" type="button">Analyze Tasks</button>
+          <button id="suggest" type="button">Get Suggestions</button>
+        </div>
+      </form>
+
+      <h3>Bulk JSON Input</h3>
+      <textarea id="bulk-json" placeholder='Paste JSON array here, e.g. [{"id":"task1","title":"Complete report",...}]'></textarea>
+      <div class="row">
+        <select id="strategy">
+          <option value="smart">Smart Balance</option>
+          <option value="fastest">Fastest Wins</option>
+          <option value="impact">High Impact</option>
+          <option value="deadline">Deadline Driven</option>
+        </select>
+        <button id="bulk-analyze" type="button">Analyze Bulk JSON</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Tasks</h2>
+      <div id="tasks-list" class="tasks-list">
+        <div class="empty-state">No tasks yet. Add a task to get started!</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Output / Suggestions</h2>
+      <div id="output">
+        <div class="empty-state">Analysis results will appear here</div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
